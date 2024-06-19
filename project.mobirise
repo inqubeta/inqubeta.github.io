@@ -1,0 +1,124 @@
+{
+  "settings": {
+    "name": "Site 2024-06-15 12:57",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.18",
+    "siteFonts": [
+      {
+        "css": "'Inter Tight', sans-serif",
+        "name": "Inter Tight",
+        "url": "https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "uniqCompNum": 6,
+    "versionPublish": "5.9.18",
+    "imageResize": true
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "InQubeta | Official Site | Home",
+        "meta_descr": "InQubeta incentivizes QUBE token holders through staking rewards, offering a passive income stream for investors. Additionally, the deflationary.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-content-text": {
+              "@media (max-width: 767px)": {
+                "padding": "0 1.5rem 1.5rem 1.5rem"
+              },
+              "@media (min-width: 768px)": {
+                "padding": "0 2.25rem 2.25rem 2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "1rem 4rem 4rem 4rem"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article08",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article8\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <div class=\"image-wrapper d-flex justify-content-center mb-4\">\n            <img mbr-if=\"showImage\" src=\"@PROJECT_PATH@/assets/images/1-flbwn-zyz8ia5la2lnoh2q-1400x933.png\" alt=\"InQubeta\">\n          </div>\n          <div class=\"card-content-text\">\n            <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b>InQubeta | Official Site | Home</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-2\"><b>What is Inqubeta</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><a href=\"https://inqubeta.github.io/\" class=\"text-primary\">InQubeta</a> The revolutionary platform that lets you invest in the future of AI technology. With $QUBE, the world's first AI crypto crowdfunding platform, you can easily and securely invest in AI start-ups and help shape the next generation of tech innovation.\n<br>\n<br>Through our innovative fractional investment system, you can own a piece of the action in some of the most exciting and promising AI start-ups in the world.\n<br>\n<br>With each investment opportunity minted into an NFT and fractionalised, you'll be able to invest in a way that suits your budget, all while enjoying the benefits of being an early backer.<br><br><b>NFT Marketplace</b><b><br></b><br><a href=\"https://inqubeta.co/\" class=\"text-primary\">InQubeta</a> NFT marketplace enables AI start-ups to mint investment opportunities into NFTs, which can be listed on our platform for QUBE token holders to invest in. Each investment opportunity is divided into fractional NFTs, making it easy for investors to invest according to their budget. As projects grow and develop, investors can earn rewards and benefits through equity-based NFTs.<br><br><b>Staking</b><br><br>By staking $QUBE tokens, investors can earn rewards from our 5% sell tax, which goes to a dedicated reward pool. Staking provides a unique opportunity for our community to earn $QUBE token rewards while supporting the growth of AI technology start-ups.<br><br><b>Governance</b><b><br></b><br>QUBE token is designed to act as a governance token, empowering its holders to actively participate in the decision-making processes of the platform. As a governance token, $QUBE holders will have the ability to propose, discuss, and vote on various aspects related to the platform's development, operation, and future direction. InQubeta is creating a more democratic and community-driven ecosystem. This function encourages active participation from token holders, allowing them to shape the platform's future and contribute to the growth and success of AI technology start-ups.<b><br></b><br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>InQubeta whitepaper</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">At InQubeta, we believe in transparency, fairness, and community engagement. That's why we've designed our platform to give you access to all the information you need to make informed investment decisions. Our online Marketplace makes it easy for AI start-ups to apply for listing, and for you to review and evaluate each project before pledging your QUBE tokens.\n<br>\n<br>We're also introducing a unique system of reward and equity based NFTs that lets you share in the success of the start-ups you invest in. As a token holder, you'll be entitled to a range of rewards and benefits, including early access to new projects, exclusive discounts, and much more.\n<br>\n<br>So, whether you're an AI enthusiast, a seasoned investor, or simply looking for a new and exciting way to invest your crypto assets, InQubeta is the platform for you. Join us today and be part of the future of AI technology.<br><br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Key Features InQubeta&nbsp;</b><b><br></b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>1. NFT Marketplace:</b> At the heart of InQubeta is its NFT marketplace, where AI startups list their equity-based NFTs. This marketplace allows investors to buy fractional ownership, making it accessible to a broader audience.<br><br><b>2. Deflationary Tokenomics:</b> QUBE, the native token of InQubeta, follows a deflationary model. A 2% burn tax on all transactions ensures a continuous reduction in supply, potentially increasing the token's value over time​ (CoinCodex)​​ (Investors Observer)​.<br><br><b>3. Staking and Rewards:</b> QUBE holders can stake their tokens to earn rewards from the staking pool, promoting long-term investment and stability within the ecosystem​ (Investors Observer)​.<br><br><b>4. Governance:</b> QUBE also functions as a governance token, granting holders the right to vote on key platform decisions, thereby ensuring community involvement in the project’s development​ (CoinCodex)​.<br><br><b>Presale Success</b><br>InQubeta's presale has been notably successful, raising over $13 million across multiple stages. This success is a testament to the project's appeal and the growing interest in AI-focused investments within the crypto community​ (Investors Observer)​. The presale is structured in stages, with each stage offering QUBE tokens at progressively higher prices, encouraging early participation and rewarding initial investors​ (Blockzeit)​.<br><br><b>Investment Opportunities<br></b>By allowing fractional investments in AI startups through NFTs, InQubeta lowers the barriers to entry traditionally associated with venture capital. This democratization of investment is particularly significant in the AI sector, which is poised for substantial growth. The platform aims to support AI innovations that could lead to significant technological advancements and lucrative returns for investors​ (Benzinga)​​ (CoinCodex)​.<br><br><b>Marketing and Community Engagement</b><br>InQubeta has implemented a robust marketing strategy, ensuring widespread visibility across major crypto media platforms and social media channels. With active engagement on platforms like Twitter and Telegram, InQubeta has built a strong community, fostering trust and transparency​ (Investors Observer)​.<br><br><b>Future Outlook<br></b>InQubeta is positioned to be a leader in the AI-driven altcoin market. The project’s innovative use of blockchain technology to support AI startups, combined with its successful presale and strong community support, indicates a promising future. Investors and AI enthusiasts alike see InQubeta as a pioneering platform that merges the potential of AI with the democratizing power of blockchain​ (The Cryptonomist)​​ (Blockzeit)​.<br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">Conclusion</h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">InQubeta is more than just a cryptocurrency; it is a revolutionary platform that opens up AI investments to the masses. By tokenizing equity and leveraging blockchain for transparent and secure transactions, InQubeta is set to play a significant role in the future of AI and crypto investments. As the project continues to grow and develop, it offers a unique opportunity for those looking to invest in the cutting-edge technologies that will shape our future.<br></p>\n              </div>\n            </div>\n\n            <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n              <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n            </div>\n          </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "ufKKpn0XjL",
+          "_anchor": "article08-5",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
